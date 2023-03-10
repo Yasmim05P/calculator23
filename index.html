@@ -11,49 +11,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
+    <script src="calculator.js"></script>
 </head>
 <body>
     <div id="calculator">
         <div id="display">
-            <div id="last-calc">1+1</div>
+            <div id="last-calc"></div>
             <div id="result">
                 <img src="./assets/equals.svg" alt="Sinal de igual">
-                <span>2</span>
+                <span></span>
             </div>
         </div>
         <div id="keyboard">
-            <button class="secondary">CE</button>
-            <button>C</button>
-            <button>
+            <button class="secondary" onclick="clean()">CE</button>
+            <button onclick="back()">C</button>
+            <button onclick="insert('%')">
                 <img src="./assets/percent.svg" alt="Sinal de porcentagem">
             </button>
-            <button class="tertiary">
+            <button class="tertiary" onclick="insert('/')">
                 <img src="./assets/divide.svg" alt="Sinal de dividir">
             </button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="tertiary">
-                <img src="./assets/x.svg" alt="Sinal de vezes">
+            <button onclick="insert('1')">1</button>
+            <button onclick="insert('2')">2</button>
+            <button onclick="insert('3')">3</button>
+            <button class="tertiary" onclick="insert('*')">
+                <img src="./assets/x.svg" alt="Sinal de vezes" >
             </button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="tertiary">
+            <button onclick="insert('4')">4</button>
+            <button onclick="insert('5')">5</button>
+            <button onclick="insert('6')">6</button>
+            <button class="tertiary" onclick="insert('-')">
                 <img src="./assets/minus.svg" alt="Sinal de menos"> 
             </button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="tertiary">
+            <button onclick="insert('7')">7</button>
+            <button onclick="insert('8')">8</button>
+            <button onclick="insert('9')">9</button>
+            <button class="tertiary" onclick="insert('+')">
                 <img src="./assets/plus.svg" alt="Sinal de mais">
             </button>
             <button>
                 <img src="./assets/plusminus.svg">
             </button>
-            <button>0</button>
-            <button>,</button>
-            <button class="quartiary">
+            <button onclick="insert('0')">0</button>
+            <button onclick="insert(',')">,</button>
+            <button class="quartiary" onclick="calculator()">
                 <img src="./assets/equals2.svg" alt="Sinal de igual">
             </button>
         </div>
